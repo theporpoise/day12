@@ -6,7 +6,7 @@
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 17:08:48 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/10 18:36:01 by mgould           ###   ########.fr       */
+/*   Updated: 2016/11/10 18:41:19 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 void	ft_oprint(char *file)
 {
-	int fd;
-	int ret;
-	char buf[SIZE + 1];
+	int		fd;
+	int		ret;
+	char	buf[SIZE + 1];
 
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
@@ -36,8 +36,8 @@ void	ft_oprint(char *file)
 
 void	print_stdin(void)
 {
-	int ret;
-	char buf[SIZE + 1];
+	int		ret;
+	char	buf[SIZE + 1];
 
 	while ((ret = read(0, buf, SIZE)) > 0)
 	{
@@ -46,7 +46,7 @@ void	print_stdin(void)
 	}
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int		i;
 
