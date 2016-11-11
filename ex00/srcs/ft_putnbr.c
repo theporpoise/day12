@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 14:06:08 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/10 15:52:31 by mgould           ###   ########.fr       */
+/*   Created: 2016/10/31 08:55:48 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/10 16:21:41 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-# include <fcntl.h>
-# include <sys/types.h>
-# include <unistd.h>
-# include <sys/uio.h>
+#include "../ft_list.h"
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	fte_putchar(char c);
-void	fte_putstr(char *str);
-void	ft_putnbr(int nb);
-int		ft_strlen(char *str);
-#endif
+void	ft_putnbr(int nb)
+{
+	long	nb_long;
+
+	nb_long = nb;
+	if (nb_long < 0)
+	{
+		ft_putchar('-');
+		nb_long *= -1;
+	}
+	if (nb_long > 9)
+	{
+		ft_putnbr((nb_long / 10));
+	}
+	ft_putchar((nb_long % 10) + '0');
+}

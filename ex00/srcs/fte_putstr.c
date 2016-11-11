@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 14:06:08 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/10 15:52:31 by mgould           ###   ########.fr       */
+/*   Created: 2016/11/01 15:13:29 by mgould            #+#    #+#             */
+/*   Updated: 2016/11/10 16:24:01 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-# include <fcntl.h>
-# include <sys/types.h>
-# include <unistd.h>
-# include <sys/uio.h>
+#include "../ft_list.h"
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	fte_putchar(char c);
-void	fte_putstr(char *str);
-void	ft_putnbr(int nb);
-int		ft_strlen(char *str);
-#endif
+void	fte_putstr(char *str)
+{
+	int index;
+
+	index = 0;
+	while (str[index] != '\0')
+	{
+		fte_putchar(str[index]);
+		index++;
+	}
+}

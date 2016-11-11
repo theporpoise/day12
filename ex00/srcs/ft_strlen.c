@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgould <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 14:06:08 by mgould            #+#    #+#             */
-/*   Updated: 2016/11/10 15:52:31 by mgould           ###   ########.fr       */
+/*   Created: 2016/10/28 22:41:49 by mgould            #+#    #+#             */
+/*   Updated: 2016/10/28 22:51:03 by mgould           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
-# include <fcntl.h>
-# include <sys/types.h>
-# include <unistd.h>
-# include <sys/uio.h>
+int	ft_strlen(char *str)
+{
+	int i;
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	fte_putchar(char c);
-void	fte_putstr(char *str);
-void	ft_putnbr(int nb);
-int		ft_strlen(char *str);
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
